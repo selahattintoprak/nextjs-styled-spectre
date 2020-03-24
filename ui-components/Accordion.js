@@ -20,9 +20,12 @@ const Header = ({ children, htmlFor }) => (
 const Body = ({ children }) => <div class="accordion-body">{children}</div>;
 
 export const Details = ({ open, children }) => (
-  <details class="accordion" open={open}>
-    {children}
-  </details>
+  <>
+    <details class="accordion" open={open}>
+      {children}
+    </details>
+    <AccordionsStyles />
+  </>
 );
 const Summary = ({ children }) => (
   <summary class="accordion-header">{children}</summary>
